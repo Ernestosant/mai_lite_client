@@ -174,7 +174,6 @@ if uploaded_file:
                         response_data = result.get('response_data', {})
                         
                         st.markdown("<div class='results-section'>", unsafe_allow_html=True)
-                        st.markdown("### Datos Extraídos")
                         st.markdown(f"""
                         <div style='border: 2px solid #4CAF50; padding: 20px; border-radius: 8px; background-color: #f9f9f9;'>
                             <table style='width: 100%; border-collapse: collapse;'>
@@ -192,7 +191,7 @@ if uploaded_file:
                                 </tr>
                                 <tr>
                                     <td style='padding: 15px;'><strong>💰 Monto Total:</strong></td>
-                                    <td style='padding: 15px;'>${response_data.get('total_amount', 'N/A')}</td>
+                                    <td style='padding: 15px;'>{response_data.get('currency', '')} {response_data.get('total_amount', 'N/A')}</td>
                                 </tr>
                             </table>
                         </div>
