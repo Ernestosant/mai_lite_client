@@ -190,6 +190,10 @@ if uploaded_file:
                                     <td style='padding: 15px; border-bottom: 1px solid #ddd;'>{response_data.get('date_time', 'N/A')}</td>
                                 </tr>
                                 <tr>
+                                    <td style='padding: 15px; border-bottom: 1px solid #ddd;'><strong>🪑 Mesa:</strong></td>
+                                    <td style='padding: 15px; border-bottom: 1px solid #ddd;'>{response_data.get('table_number', 'N/A')}</td>
+                                </tr>
+                                <tr>
                                     <td style='padding: 15px;'><strong>💰 Monto Total:</strong></td>
                                     <td style='padding: 15px;'>{response_data.get('currency', '')} {response_data.get('total_amount', 'N/A')}</td>
                                 </tr>
